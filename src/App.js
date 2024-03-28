@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import PlayersList from './components/PlayersList';
+import GameByGame from './components/GameByGame';
 import './App.css';
 
+
 function App() {
+  const [view, setView] = useState('list');
+  const [selectedPlayer, setSelectedPlayer] = useState(null);
+  const [selectedPlayerData, setSelectedPlayerData] = useState(null);
+
+  const showGameByGame = (player,playerData) => {
+    setSelectedPlayer(player);
+    setSelectedPlayerData(playerData);
+    setView('gameByGame');
+  };
+  const goBackToList = () => {
+    setView('list');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <img className='header-img' src='./TruMedia.png' />
       </header>
+      <div className="container">
+      {view === 'list' && <PlayersList onShowGameByGame={showGameByGame} />}
+      {view === 'gameByGame' && <GameByGame player={selectedPlayer} playerData={selectedPlayerData} onBack={goBackToList} />}
+      </div>
     </div>
   );
 }
