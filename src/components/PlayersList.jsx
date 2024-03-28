@@ -17,7 +17,7 @@ function PlayersList({onShowGameByGame}) {
     fetch('https://project.trumedianetworks.com/api/token', {
       method: 'GET',
       headers: {
-        'apiKey': process.env.API_KEY,
+        'apiKey': '3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f',
       },
     })
       .then(response => response.json())
