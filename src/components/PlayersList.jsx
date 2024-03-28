@@ -70,7 +70,7 @@ function PlayersList({onShowGameByGame}) {
         style={{margin: '20px 0', padding: '10px', width: 'calc(100% - 22px)'}}
       />
       <div className='player-list-wrapper'>
-        {filteredPlayers.length > 0 ? (
+        {players!==null && players.length>0 && filteredPlayers.length > 0 ? (
           filteredPlayers.map(player => (
             <PlayerRow
               key={player.playerId}
