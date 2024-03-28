@@ -10,7 +10,6 @@ function PlayersList({onShowGameByGame}) {
   const [searchTerm, setSearchTerm] = useState("");
   const [token, setToken] = useState("");
   const teamList = config.teamList;
-  const apiKey = process.env.API_KEY;
 
 
   useEffect(() => {
@@ -18,7 +17,7 @@ function PlayersList({onShowGameByGame}) {
     fetch('https://project.trumedianetworks.com/api/token', {
       method: 'GET',
       headers: {
-        'apiKey': apiKey,
+        'apiKey': process.env.API_KEY,
       },
     })
       .then(response => response.json())
