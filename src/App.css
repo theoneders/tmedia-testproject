@@ -3,9 +3,9 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    overflow-y: auto; /* Enable vertical scroll */
-    max-height: calc(100vh - 200px); /* Set maximum height to fill the remaining viewport height */
-    padding-right: 10px; /* Add some padding to prevent content from being hidden under scrollbar */
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+    padding-right: 10px;
 }
 
 .player-item {
@@ -123,7 +123,7 @@ header {
 
 .horizontal-stats div {
     flex: 1;
-    margin-right: 20px; /* Adjust margin as needed */
+    margin-right: 20px;
 }
 
 .horizontal-stats p {
@@ -140,27 +140,27 @@ header {
 }
 
 .team-header img {
-    width: 25px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 25px;
+    height: auto;
 }
 
 .team-images img {
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
 }
 
 .team-header span {
-    margin: 0 10px; /* Adjust the spacing between the images and the date */
+    margin: 0 10px;
 }
 
 .game-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    overflow-y: auto; /* Enable vertical scroll */
-    max-height: calc(100vh - 200px); /* Set maximum height to fill the remaining viewport height */
-    padding-right: 10px; /* Add some padding to prevent content from being hidden under scrollbar */
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+    padding-right: 10px;
 }
 
 .game-list li {
@@ -168,11 +168,11 @@ header {
 }
 
 .game-list li.even {
-    background-color: #f4f4f4; /* Lighter background color */
+    background-color: #f4f4f4;
 }
 
 .game-list li.odd {
-    background-color: #ffffff; /* Default background color */
+    background-color: #ffffff;
 }
 
 .game-container {
@@ -181,12 +181,12 @@ header {
 
 .game-info,
 .game-stats {
-    flex: 1; /* Distribute available space equally */
+    flex: 1;
 }
 
 .game-info, .game-stats {
     display: inline-block;
-    vertical-align: top; /* Align both sections to the top */
+    vertical-align: top;
 }
 
 .at-text {
@@ -218,14 +218,14 @@ header {
 }
 
 .back-button {
-    padding: 4px; /* Adjust padding as needed */
+    padding: 4px;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
 .back-button:hover {
-    background-color: #b40101; /* Darker green */
+    background-color: #b40101;
 }
 
 

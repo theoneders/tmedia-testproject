@@ -43,7 +43,7 @@ function GameByGame({playerData, player, onBack}) {
     }
   };
   const goBackToList = () => {
-    onBack(); // Call the onBack function passed from App.js
+    onBack();
   };
 
   const clearSelection = () => {
@@ -86,7 +86,7 @@ function GameByGame({playerData, player, onBack}) {
   const slg = aggregateStats.totalTB / aggregateStats.totalAB;
   const ops = obp + slg;
   const filteredGames = playerData.filter((game) => {
-    if (!searchTerm.trim()) return true; // Return true if search term is empty
+    if (!searchTerm.trim()) return true;
     const searchTermLower = searchTerm.toLowerCase();
 
     if (!isNaN(searchTermLower)) {
@@ -181,8 +181,8 @@ function GameByGame({playerData, player, onBack}) {
             /></div>
           <ul className="game-list">
             {[...filteredGames].reverse().map((game, index) => {
-              const isSelected = selectedGames.includes(game.gameId); // Check if the game is selected
-              const listItemClass = isSelected ? 'selected' : index % 2 === 0 ? 'even' : 'odd'; // Apply 'selected' class if the game is selected
+              const isSelected = selectedGames.includes(game.gameId);
+              const listItemClass = isSelected ? 'selected' : index % 2 === 0 ? 'even' : 'odd';
               return (
                 <li key={index} className={listItemClass} onClick={() => handleGameClick(game.gameId)}>
                   <div className="game-info">

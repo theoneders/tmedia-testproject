@@ -1,6 +1,6 @@
 // PlayerRow.js
 import React, { useState, useEffect } from 'react';
-import PlayerStats from './PlayerStats'; // Import the PlayerStats component
+import PlayerStats from './PlayerStats';
 
 
 function PlayerRow({player,token, onShowGameByGame, isExpanded, toggleExpand}) {
